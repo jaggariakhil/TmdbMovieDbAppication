@@ -1,0 +1,118 @@
+
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <form (ngSubmit)="onSearch(f) " #f="ngForm">
+        
+                    
+        
+               
+                
+            <div class="row">
+            
+            <div class="col-sm-3">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Movie Id</mat-label>
+                    <input matInput placeholder="Movei ID"  #id="ngModel" name="id" ngModel required  class="form-control">
+                    <mat-error *ngIf="id.invalid && id.touched">Name is Required</mat-error>
+                    
+                  </mat-form-field>  
+
+               
+
+                
+                  
+        </div>
+        <div class="col-sm-3">
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <mat-select name="searchByLanguage" form-group ngModel required  #searchby="ngModel" class="form-control" >
+                  <div *ngFor="let i of languages">
+                    <mat-option value= {{i}}> {{i}} </mat-option>
+                </div>
+                </mat-select>
+               
+              </mat-form-field>
+
+        </div>
+         
+            
+                <div class="col-sm-2">
+                    <button [disabled]="!f.valid"  mat-raised-button color="primary" type="submit" >Search</button>
+        
+                </div>
+                </div>
+        
+        </form>
+
+
+        <div class="container"  >
+           
+            <p >{{msg}}</p>
+            <mat-card class="example-card" *ngIf="i"  >
+                <mat-card-header>
+                    
+                    <mat-card-title>{{movie.original_title}}</mat-card-title>
+                    <mat-card-subtitle>Language: {{movie.original_language}}</mat-card-subtitle>
+                  </mat-card-header>
+     
+
+                        
+                
+                <mat-card-content >
+                    <h2>FlatRates</h2>
+                    <div class="grid-container">
+                        <ul *ngFor="let j of i.flatrate" >
+                       
+                            <li>
+                                
+                                <img src={{imagepath}}{{j.logo_path}} alt={{imagepath}}{{j.logo_path}}>
+                            </li>
+                           
+                               
+                           
+                  
+                        </ul>   
+                    </div>
+                    
+                    <h2>Rent</h2>  
+                    <div class="grid-container">
+                        <ul *ngFor="let j of i.rent">
+                     
+                            <li>
+                                <img src={{imagepath}}{{j.logo_path}} alt="">
+                            </li>
+                    
+                        </ul>  
+                    </div>
+                    <h2>Buy</h2>
+                    <div class="grid-container" >
+                        
+                        <ul *ngFor="let j of i.buy"  >
+                            
+                            <li >
+                                <img class="p-2"  src={{imagepath}}{{j.logo_path}}  alt="">
+                            </li>
+                    
+                        </ul>        
+                    </div>
+
+                   
+                  
+      </mat-card-content>
+      </mat-card>
+      
+            </div>
+    
+
+
+
+        </div>
+
+
+
+
+
+
+</div>

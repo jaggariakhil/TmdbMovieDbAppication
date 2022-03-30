@@ -1,0 +1,50 @@
+
+.example-card {
+    max-width: 500px;
+    margin-bottom: 4px;
+  }
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+h3{
+  font-weight: bold;
+}
+
+  img {
+    
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 1px;
+    width: 500;
+    height:500;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+  }
+  
+  ngb-rating {
+    color:pink;
+    font-size: 15px;
+}
+::ng-deep.visually-hidden{
+  display: none;
+}
+
+.img1 {
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  padding: 2px;
+  width: 50px;
+}
+
+.grid-container1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}

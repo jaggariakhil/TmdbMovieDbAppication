@@ -1,0 +1,86 @@
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <form (ngSubmit)="onSearch(f) " #f="ngForm">
+        
+                    
+        
+               
+                
+            <div class="row">
+            
+            <div class="col-sm-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Movie Id</mat-label>
+                    <input matInput placeholder="Movei ID"  #id="ngModel" name="id" ngModel required  class="form-control">
+                    <mat-error *ngIf="id.invalid && id.touched">Name is Required</mat-error>
+                    
+                  </mat-form-field>  
+
+               
+
+                
+                  
+        </div>
+         
+            
+                <div class="col-sm-4">
+                    <button [disabled]="!f.valid"  mat-raised-button color="primary" type="submit" >Search</button>
+        
+                </div>
+                </div>
+        
+        </form>
+
+
+
+
+        <div class="container"  >
+           
+            <p *ngIf="!i">{{msg}}</p>
+                <mat-card class="example-card" *ngIf=i  >
+                    <mat-card-header>
+                        
+                        <mat-card-title>{{i.original_title}}</mat-card-title>
+                        <mat-card-subtitle>Language: {{i.original_language}}</mat-card-subtitle>
+                      </mat-card-header>
+                     
+                     <div class="row">
+                         <div class="col-sm-6">
+    
+                            <img mat-card-image   src={{imagepath}}{{i.backdrop_path}} alt={{imagepath}}{{i.backdrop_path}}>
+                         </div>
+                         <div class="col-sm-6">
+                          <span style="color:blue;font-weight:bold">Summary</span>  <br> {{i.overview}}
+                         </div>
+                     </div>
+                     <br>
+                    
+                    <mat-card-content >
+                        
+                       <p>
+                           Adult:{{i.adult}}
+                       </p> 
+                      <p>ReleaseDate:{{i.release_date}}</p>
+                      <p>MovieId:{{i.id}}</p>
+                      <p>RunTime:{{i.runtime}}</p>
+                      <p>Rating:{{i.vote_average}}</p>
+                      <ul *ngFor="let j of i.production_companies">
+                        <li>
+                            {{j.name}}
+                          </li> 
+                        </ul>
+                    
+                    </mat-card-content>
+                    </mat-card>
+          
+                </div>
+                </div>
+                </div>
+
+

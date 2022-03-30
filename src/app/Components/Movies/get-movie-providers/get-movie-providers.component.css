@@ -1,0 +1,12 @@
+img {
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    padding: 2px;
+    width: 70px;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr ;
+    grid-gap: 5px;
+}

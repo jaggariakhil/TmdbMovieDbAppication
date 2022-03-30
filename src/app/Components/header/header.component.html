@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a routerLinkActive="active"  [routerLink]="['/']" routerLinkActive="router-link-active" class="navbar-brand">Movie Api</a>
+      </div>
+  
+      <div >
+        <ul class="nav navbar-nav">
+         
+
+
+         
+         
+          <li ><a routerLinkActive="active"  [routerLink]="['/upcomingmovies']" routerLinkActive="router-link-active" >Upcoming Movies</a></li>
+          <li ><a routerLinkActive="active"  [routerLink]="['/getmovie']" routerLinkActive="router-link-active" >Get Movies</a></li>
+          <li ><a routerLinkActive="active"  [routerLink]="['/getreview']" routerLinkActive="router-link-active" >Get Review</a></li>
+          <li ><a routerLinkActive="active"  [routerLink]="['/getmovieproviders']" routerLinkActive="router-link-active" >Movie Providers</a></li>
+         
+        
+          
+          
+    
+        </ul>    
+
+        <ul class="nav navbar-nav navbar-right" >
+          <li>
+            <a *ngIf="!loggedIn" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a> 
+           
+          </li>
+          <li>
+          
+            <a *ngIf="loggedIn" style="cursor: pointer"  routerLinkActive="router-link-active" (click)="onLogout()">Logout</a> 
+          </li>
+         
+          </ul>
+      
+        
+      </div>
+    </div>
+  </nav>
+
+
+  

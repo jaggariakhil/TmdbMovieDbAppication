@@ -1,0 +1,30 @@
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="container"  class="grid-container "  >
+           
+            <mat-card class="example-card" *ngIf=i  >
+                <mat-card-header>
+                    
+                    <mat-card-title>{{i.name}}</mat-card-title>
+                    <mat-card-subtitle>Language:{{i.original_language}}</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image  class="center" src={{imagepath}}{{i.poster_path}} alt={{i.original_title}}>
+                
+        
+                <mat-card-content class="center">
+                    <p>Popularity: {{i.popularity}} </p>
+                    <p>MovieId:{{i.id}}</p>
+                   <p>
+                       Rating:{{i.vote_average}}
+                   </p> 
+                  <p>FirstAirDate:{{i.first_air_date}}</p>
+                </mat-card-content>
+                </mat-card>
+                </div>
+                </div>
+                </div>
+
+

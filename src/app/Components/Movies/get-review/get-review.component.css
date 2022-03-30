@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.reviewName{
+  background:skyblue;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  }
+ 
